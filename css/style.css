@@ -1,0 +1,26 @@
+:root {
+    --primary-color: #3498db; /* VARIABLE OBLIGATORIA */
+    --font-main: 'Roboto', sans-serif;
+    --main-padding: 20px;
+    --grip-gap: 15px;
+    --text-main: #2c3e50;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-main);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* grilla de 6 columnas*/
+    gap: 10px;
+}
+
+header {
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.boton-especial {
+    background-color: var(--accent-color);
+}
