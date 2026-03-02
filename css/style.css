@@ -1,20 +1,30 @@
+/* ============================== */
+/* Variables globales del diseno */
+/* ============================== */
 :root {
+    /* Paleta principal */
     --color-bg: #f4f0e8;
     --color-surface: #fffaf2;
     --color-ink: #171717;
     --color-primary: #ff4d43;
     --color-accent: #b6ff5d;
     --color-muted: #5b5b5b;
+
+    /* Sombra y tipografias */
     --shadow-strong: 0 18px 34px rgba(0, 0, 0, 0.18);
     --font-title: "Archivo Black", sans-serif;
     --font-body: "Manrope", sans-serif;
+
+    /* Espaciado base reutilizable */
     --space: 1.1rem;
 }
 
+/* Hace que padding y border no rompan el ancho calculado */
 * {
     box-sizing: border-box;
 }
 
+/* Estilos generales de pagina */
 body {
     margin: 0;
     background: radial-gradient(circle at 8% 8%, #fffef7 0%, var(--color-bg) 42%, #ece2d2 100%);
@@ -23,6 +33,7 @@ body {
     line-height: 1.5;
 }
 
+/* Limita ancho del contenido para mejor lectura */
 .hero,
 main,
 footer {
@@ -30,10 +41,12 @@ footer {
     margin: 0 auto;
 }
 
+/* Seccion de encabezado */
 .hero {
     padding: 2.8rem 0 1.4rem;
 }
 
+/* Texto pequeño superior */
 .eyebrow {
     margin: 0;
     text-transform: uppercase;
@@ -42,6 +55,7 @@ footer {
     color: var(--color-muted);
 }
 
+/* Titulares */
 h1,
 h2 {
     margin: 0;
@@ -56,12 +70,14 @@ h1 {
     max-width: 11ch;
 }
 
+/* Parrafo de introduccion en header */
 .hero > p:last-child {
     margin-top: 0.9rem;
     max-width: 62ch;
     color: var(--color-muted);
 }
 
+/* Grid principal del contenido */
 main {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -69,6 +85,7 @@ main {
     padding-bottom: 1.4rem;
 }
 
+/* Sub-grid donde se montan las tarjetas */
 .layout-grid {
     grid-column: 1 / 6;
     display: grid;
@@ -78,6 +95,7 @@ main {
     min-height: 560px;
 }
 
+/* Estilo base para todas las tarjetas */
 .card {
     background: var(--color-surface);
     border: 2px solid var(--color-ink);
@@ -95,6 +113,7 @@ main {
     margin: 0;
 }
 
+/* Posicionamiento individual para crear traslapes artistico */
 .card-feature {
     grid-column: 1 / 5;
     grid-row: 1 / 3;
@@ -125,6 +144,7 @@ main {
     z-index: 4;
 }
 
+/* Barra lateral semantica */
 .notes {
     grid-column: 6 / 7;
     align-self: start;
@@ -143,13 +163,18 @@ main {
     color: #303030;
 }
 
+/* Pie de pagina */
 footer {
     border-top: 2px solid var(--color-ink);
     padding: 1rem 0 1.5rem;
     font-weight: 600;
 }
 
+/* ============================== */
+/* Responsive para movil/tablet  */
+/* ============================== */
 @media (max-width: 860px) {
+    /* Se pasa de 6 columnas a 1 columna */
     main {
         grid-template-columns: 1fr;
     }
@@ -163,6 +188,7 @@ footer {
         min-height: auto;
     }
 
+    /* Se elimina traslape para lectura comoda en pantallas pequenas */
     .card-feature,
     .card-accent,
     .card-support,
