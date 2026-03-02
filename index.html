@@ -15,17 +15,14 @@
 
     <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Script para abrir/cerrar tarjetas -->
-    <script src="js/cards.js" defer></script>
 </head>
 <body>
     <!-- Encabezado principal del manifiesto -->
     <header class="hero">
         <p class="eyebrow">Lookbook Digital 2026</p>
-        <h1>Manifiesto de Diseno</h1>
+        <h1>Manifiesto de Diseño</h1>
         <p>
-            El diseno no es decoracion: es estructura, ritmo visual y narrativa.
+            El diseño no es decoracion: es estructura, ritmo visual y narrativa.
             Cada modulo comunica intencion y cada contraste dirige la mirada.
         </p>
     </header>
@@ -37,38 +34,46 @@
             <!-- Cada article es una tarjeta de contenido -->
             <article class="card card-feature">
                 <h2>Principio 01: Jerarquia</h2>
-                <div class="card-content" id="content-1">
-                    <p>Los bloques principales dominan por escala; lo secundario vive en contraste y proximidad.</p>
-                    <p>Un titular grande abre la lectura, y luego la informacion desciende por niveles de importancia para evitar saturacion.</p>
-                </div>
-                <button class="card-toggle" type="button" aria-expanded="false" aria-controls="content-1">Ver completo</button>
+                <p class="card-preview">Los bloques principales dominan por escala; lo secundario vive en contraste y proximidad.</p>
+                <details class="card-details">
+                    <summary class="card-toggle">Ver completo</summary>
+                    <div class="card-more">
+                        <p>Un titular grande abre la lectura, y luego la informacion desciende por niveles de importancia para evitar saturacion.</p>
+                    </div>
+                </details>
             </article>
 
             <article class="card card-accent">
                 <h2>Principio 02: Ritmo</h2>
-                <div class="card-content" id="content-2">
-                    <p>El desplazamiento de las piezas genera una lectura dinamica que evita la monotonia.</p>
-                    <p>La variacion de posicion en la grilla, junto con la separacion por espacios consistentes, construye continuidad visual.</p>
-                </div>
-                <button class="card-toggle" type="button" aria-expanded="false" aria-controls="content-2">Ver completo</button>
+                <p class="card-preview">El desplazamiento de las piezas genera una lectura dinamica que evita la monotonia.</p>
+                <details class="card-details">
+                    <summary class="card-toggle">Ver completo</summary>
+                    <div class="card-more">
+                        <p>La variacion de posicion en la grilla, junto con la separacion por espacios consistentes, construye continuidad visual.</p>
+                    </div>
+                </details>
             </article>
 
             <article class="card card-support">
                 <h2>Principio 03: Tension Visual</h2>
-                <div class="card-content" id="content-3">
-                    <p>Las superposiciones controladas crean profundidad y una experiencia de revista interactiva.</p>
-                    <p>La tension se percibe cuando dos planos compiten por atencion, pero el orden de capas mantiene la lectura estable.</p>
-                </div>
-                <button class="card-toggle" type="button" aria-expanded="false" aria-controls="content-3">Ver completo</button>
+                <p class="card-preview">Las superposiciones controladas crean profundidad y una experiencia de revista interactiva.</p>
+                <details class="card-details">
+                    <summary class="card-toggle">Ver completo</summary>
+                    <div class="card-more">
+                        <p>La tension se percibe cuando dos planos compiten por atencion, pero el orden de capas mantiene la lectura estable.</p>
+                    </div>
+                </details>
             </article>
 
             <article class="card card-quote">
                 <h2>Principio 04: Sistema</h2>
-                <div class="card-content" id="content-4">
-                    <p>"Una grilla no limita: libera decisiones".</p>
-                    <p>Un sistema bien definido reduce improvisacion y permite concentrar energia en contenido, no en correcciones de ultima hora.</p>
-                </div>
-                <button class="card-toggle" type="button" aria-expanded="false" aria-controls="content-4">Ver completo</button>
+                <p class="card-preview">"Una grilla no limita: libera decisiones".</p>
+                <details class="card-details">
+                    <summary class="card-toggle">Ver completo</summary>
+                    <div class="card-more">
+                        <p>Un sistema bien definido reduce improvisacion y permite concentrar energia en contenido, no en correcciones de ultima hora.</p>
+                    </div>
+                </details>
             </article>
         </section>
 

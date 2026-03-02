@@ -110,35 +110,29 @@ main {
     transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
+.card-details {
+    margin-top: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
 .card h2 {
     font-size: clamp(1rem, 1.4vw, 1.3rem);
 }
 
-/* Contenido colapsado por defecto */
-.card-content {
-    max-height: 4.8em;
-    overflow: hidden;
-    position: relative;
-}
-
-/* Sombra al final para indicar mas contenido */
-.card:not(.is-open) .card-content::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1.6rem;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--card-bg));
-}
-
-.card-content p {
+.card-preview,
+.card-more p {
     margin: 0;
+}
+
+.card-more {
+    max-height: 15rem;
+    overflow: auto;
+    padding-right: 0.2rem;
 }
 
 /* Boton para abrir/cerrar contenido */
 .card-toggle {
-    margin-top: auto;
     width: fit-content;
     border: 2px solid var(--color-ink);
     background: #ffffff;
@@ -148,6 +142,10 @@ main {
     font: inherit;
     font-weight: 700;
     cursor: pointer;
+}
+
+.card-toggle::-webkit-details-marker {
+    display: none;
 }
 
 .card-toggle:hover {
@@ -160,20 +158,27 @@ main {
 }
 
 /* Estado abierto: la tarjeta toma prioridad visual */
-.card.is-open {
+.card:has(.card-details[open]) {
     transform: none !important;
     z-index: 30 !important;
     box-shadow: 0 22px 40px rgba(0, 0, 0, 0.26);
 }
 
-.card.is-open .card-content {
-    max-height: 15rem;
-    overflow: auto;
-    padding-right: 0.2rem;
+.card-details[open] .card-toggle {
+    background: var(--color-ink);
+    color: #ffffff;
 }
 
-.card.is-open .card-content::after {
-    display: none;
+.card-details[open] .card-toggle::before {
+    content: "Cerrar";
+}
+
+.card-details[open] .card-toggle {
+    font-size: 0;
+}
+
+.card-details[open] .card-toggle::before {
+    font-size: 1rem;
 }
 
 /* Posicionamiento individual para crear traslapes artistico */
@@ -267,7 +272,7 @@ footer {
         transform: none;
     }
 
-    .card.is-open .card-content {
+    .card-details[open] .card-more {
         max-height: 20rem;
     }
 
