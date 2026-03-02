@@ -1,6 +1,6 @@
 # Arquitectura Semantica y Layouts Modernos
 
-Este repositorio presenta un **manifiesto de diseno** construido con HTML5 semantico y CSS Grid.
+Este repositorio presenta un **manifiesto de diseño** construido con HTML5 semantico y CSS Grid.
 
 ## Estructura del proyecto
 - `index.html`: documento principal con etiquetas `header`, `main`, `section`, `article`, `aside` y `footer`.
